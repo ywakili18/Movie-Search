@@ -37,7 +37,6 @@ const searchResults = async (result) => {
 
 // creating movies
 const createMovies = (data) => {
-  console.log(data)
   // checks if anything has return from search query
   data.length < 1 ? alert('No movies returned 😔 try again') : null
 
@@ -47,7 +46,7 @@ const createMovies = (data) => {
     const overview = data[i].overview
     const imgSrc = data[i].poster_path
     const date = data[i].release_date
-
+    const language = data[i].original_language
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
@@ -57,7 +56,8 @@ const createMovies = (data) => {
       overview: overview,
       imgSrc: imgSrc,
       div: createDiv,
-      date: date
+      date: date,
+      language: language
     }
     createMovieData(movieData)
 
@@ -70,7 +70,7 @@ const createMovies = (data) => {
 const createMovieData = (data) => {
   createTitle(data.title, data.div)
   createImg(data.imgSrc, data.div)
-  createOverview(data.overview, data.date, data.div)
+  createOverview(data.overview, data.date, data.language, data.div)
 }
 
 // Title
@@ -81,7 +81,7 @@ const createTitle = (title, div) => {
 }
 
 // Overview
-const createOverview = (description, date, div) => {
+const createOverview = (description, date, lang, div) => {
   // Creating description div container
   const descriptionDiv = document.createElement('div')
   descriptionDiv.id = 'descriptionContainer'
@@ -94,15 +94,22 @@ const createOverview = (description, date, div) => {
     descriptionDiv.appendChild(p)
     div.appendChild(descriptionDiv)
   } else {
-    const p1 = document.createElement('p')
-    const p2 = document.createElement('p')
-    const today = new Date()
-    p1.innerHTML = `${description}`
-    p2.innerHTML = `Release date: ${today.toLocaleDateString('en-US', date)}`
+    const movieDescription = document.createElement('p')
+    movieDescription.innerHTML = `${description}`
+
+    const releaseDate = document.createElement('p')
+    const convertDate = new Date()
+    releaseDate.innerHTML = `Release date: ${convertDate.toLocaleDateString(
+      'en-US',
+      date
+    )}`
+    const language = document.createElement('p')
+    language.innerHTML = `Language: ${lang.toUpperCase()}`
 
     // appending and adding to move container div
-    descriptionDiv.appendChild(p1)
-    descriptionDiv.appendChild(p2)
+    descriptionDiv.appendChild(movieDescription)
+    descriptionDiv.appendChild(releaseDate)
+    descriptionDiv.appendChild(language)
     div.appendChild(descriptionDiv)
   }
 }

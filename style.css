@@ -100,9 +100,6 @@ form {
   }
 }
 
-#movieContainer {
-  border: solid 1px black;
-}
 #movieContainer h5 {
   text-decoration: underline;
 }
