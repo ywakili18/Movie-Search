@@ -4,10 +4,9 @@ body {
   background-color: #121212;
   color: white;
 }
-header {
-  text-align: center;
+#searchButton {
+  margin-left: 1em;
 }
-
 img {
   height: 200px;
 }
@@ -28,6 +27,7 @@ form {
   column-gap: 2rem;
   background-color: #121212;
 }
+
 #wrapper h5 {
   text-decoration: underline;
   text-align: center;
@@ -36,6 +36,38 @@ form {
 
 #wrapper p {
   text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    grid-template-columns: none;
+  }
+  #searchInput {
+    width: 20em;
+    font-size: 1em;
+    height: 2em;
+    margin-top: 1em;
+  }
+  #searchButton {
+    padding: 0.25em;
+    width: 5em;
+    height: 2em;
+    margin-top: 1em;
+  }
+  h1 {
+    font-size: 1.25em;
+  }
 }
 
 #descriptionContainer {

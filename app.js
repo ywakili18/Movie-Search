@@ -95,11 +95,13 @@ const createImg = (img, div) => {
     image.id = 'movieImage'
     image.classList.add('img-fluid')
     image.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/No_image_available_500_x_500.svg/1200px-No_image_available_500_x_500.svg.png`
+    image.alt = 'Empty Image'
     div.appendChild(image)
   } else {
     const image = document.createElement('img')
     image.id = 'movieImage'
     image.classList.add('img-fluid')
+    image.alt = 'Movie Image'
     image.src = `${IMAGE_BASE_PATH}/${img}`
     div.appendChild(image)
   }

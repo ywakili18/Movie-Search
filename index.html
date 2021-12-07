@@ -16,18 +16,28 @@
     <title>Movie Library</title>
   </head>
   <body>
-    <header><h1>TMDB Library</h1></header>
+    <header>
+      <h1>
+        Movie-Search
+        <small class="text-muted h6"
+          >Search for movies using the TMDB database</small
+        >
+      </h1>
+    </header>
+
     <main>
       <form id="searchForm">
         <input
           type="text"
-          placeholder="TV Show Title"
+          placeholder="Enter movie here..."
           name="query"
           value=""
           class="form-control"
           id="searchInput"
         />
-        <button class="btn btn-outline-danger">Search</button>
+        <button class="btn btn-outline-danger sm:btn-sm" id="searchButton">
+          Search
+        </button>
       </form>
       <div id="wrapper" class="card"></div>
     </main>
