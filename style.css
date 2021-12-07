@@ -103,10 +103,17 @@ form {
 #movieContainer {
   border: solid 1px black;
 }
+#movieContainer h5 {
+  text-decoration: underline;
+}
 #descriptionContainer {
   margin-top: 1em;
-  font-size: small;
+  font-size: medium;
   text-align: start;
+}
+
+#descriptionContainer p:nth-child(2) {
+  font-style: italic;
 }
 /* dark mode svg hidden by default, linked to dark-mode.css */
 #darkModeContainer {

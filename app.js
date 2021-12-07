@@ -26,7 +26,7 @@ input.addEventListener('submit', (e) => {
 const searchResults = async (result) => {
   try {
     const res = await axios.get(
-      `${DOMAIN}/search/movie?query=${result}&api_key=${API_KEY}`
+      `${DOMAIN}/search/movie?query=${result}&api_key=${API_KEY}&`
     )
     const resultsList = res.data.results
     createMovies(resultsList)
@@ -37,22 +37,29 @@ const searchResults = async (result) => {
 
 // creating movies
 const createMovies = (data) => {
+  console.log(data)
   // checks if anything has return from search query
-  data.length < 1
-    ? alert('No movies returned 😔 try again')
-    : console.log('error')
+  data.length < 1 ? alert('No movies returned 😔 try again') : null
 
   // looping through the returned data and creating the content for page
   for (let i = 0; i < data.length; i++) {
     const title = data[i].title
     const overview = data[i].overview
     const imgSrc = data[i].poster_path
+    const date = data[i].release_date
 
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
 
-    createMovieData(title, overview, imgSrc, createDiv)
+    const movieData = {
+      title: title,
+      overview: overview,
+      imgSrc: imgSrc,
+      div: createDiv,
+      date: date
+    }
+    createMovieData(movieData)
 
     // append to main wrapper
     wrapper.appendChild(createDiv)
@@ -60,10 +67,10 @@ const createMovies = (data) => {
 }
 
 // Creating movie title, overview, and image.
-const createMovieData = (movieTitle, movieOverview, movieImg, div) => {
-  createImg(movieImg, div)
-  createTitle(movieTitle, div)
-  createOverview(movieOverview, div)
+const createMovieData = (data) => {
+  createTitle(data.title, data.div)
+  createImg(data.imgSrc, data.div)
+  createOverview(data.overview, data.date, data.div)
 }
 
 // Title
@@ -74,7 +81,7 @@ const createTitle = (title, div) => {
 }
 
 // Overview
-const createOverview = (description, div) => {
+const createOverview = (description, date, div) => {
   // Creating description div container
   const descriptionDiv = document.createElement('div')
   descriptionDiv.id = 'descriptionContainer'
@@ -87,11 +94,15 @@ const createOverview = (description, div) => {
     descriptionDiv.appendChild(p)
     div.appendChild(descriptionDiv)
   } else {
-    const p = document.createElement('p')
-    p.innerHTML = `${description}`
+    const p1 = document.createElement('p')
+    const p2 = document.createElement('p')
+    const today = new Date()
+    p1.innerHTML = `${description}`
+    p2.innerHTML = `Release date: ${today.toLocaleDateString('en-US', date)}`
 
     // appending and adding to move container div
-    descriptionDiv.appendChild(p)
+    descriptionDiv.appendChild(p1)
+    descriptionDiv.appendChild(p2)
     div.appendChild(descriptionDiv)
   }
 }
