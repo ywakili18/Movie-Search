@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+header {
+  text-align: center;
+}
+body {
+  text-align: center;
+}
+
+img {
+  height: 200px;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+#searchInput {
+  width: 25em;
+  font-size: 1em;
+}
+/* main wrapper containing each movie div */
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2em;
+  justify-content: space-evenly;
+  column-gap: 2rem;
+}
+#wrapper h5 {
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 1em;
+}
+
+#wrapper p {
+  text-align: center;
+}
+
+#descriptionContainer {
+  margin-top: 1em;
+  font-size: small;
+}
+
+#container {
+  border: solid 1px black;
+}
