@@ -2,9 +2,11 @@
 body {
   box-sizing: border-box;
   text-align: center;
-  background-color: #121212;
-  color: white;
   font-family: 'Raleway', sans-serif;
+}
+body,
+#wrapper {
+  background-color: #ffffff;
 }
 h1 {
   font-weight: bold;
@@ -20,6 +22,11 @@ nav {
   justify-content: space-evenly;
   margin: auto;
 }
+#toggleDark {
+  width: auto;
+  margin-top: 1em;
+}
+
 a {
   margin-top: 1em;
   font-size: 0.8em;
@@ -58,7 +65,6 @@ form {
   margin-top: 2em;
   justify-content: space-evenly;
   column-gap: 2rem;
-  background-color: #121212;
 }
 
 #wrapper h5 {
@@ -108,4 +114,14 @@ form {
 
 #movieContainer {
   border: solid 1px black;
+}
+/* dark mode svg hidden by default, linked to dark-mode.css */
+#darkModeContainer {
+  margin-top: 1.3em;
+}
+#darkSvg {
+  display: none;
+}
+#sunSvg {
+  color: rgb(128, 128, 77);
 }

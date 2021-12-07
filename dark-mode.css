@@ -1,0 +1,15 @@
+[data-theme='dark'] {
+  background-color: #121212 !important;
+  color: #eee;
+}
+[data-theme='dark'] #darkSvg {
+  display: inline;
+  color: rgb(220, 166, 228);
+}
+[data-theme='dark'] #sunSvg {
+  display: none;
+}
+[data-theme='dark'] #wrapper {
+  background-color: #121212 !important;
+  color: #eee;
+}
