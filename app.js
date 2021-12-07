@@ -72,6 +72,7 @@ const createOverview = (description, div) => {
   const descriptionDiv = document.createElement('div')
   descriptionDiv.id = 'descriptionContainer'
   if (description === '') {
+    const h5 = document.createElement('h5')
     const p = document.createElement('p')
     p.innerHTML = `Description not available 😔`
     descriptionDiv.appendChild(h5)

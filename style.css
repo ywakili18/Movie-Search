@@ -1,10 +1,10 @@
-html {
+body {
   box-sizing: border-box;
+  text-align: center;
+  background-color: #121212;
+  color: white;
 }
 header {
-  text-align: center;
-}
-body {
   text-align: center;
 }
 
@@ -26,6 +26,7 @@ form {
   margin-top: 2em;
   justify-content: space-evenly;
   column-gap: 2rem;
+  background-color: #121212;
 }
 #wrapper h5 {
   text-decoration: underline;
