@@ -30,23 +30,26 @@ const movieResults = async (result) => {
     const resultsList = res.data.results
     createMovies(resultsList)
   } catch (err) {
-    alert('No movies returned 😔 try again')
     console.log('Error: msg of', err)
   }
 }
 
 // creating movies
 const createMovies = (results) => {
+  // checks if anything has return from search query
+  results.length < 1
+    ? alert('No movies returned 😔 try again')
+    : console.log('error')
+
+  // looping through the returned data and creating the content for page
   for (let i = 0; i < results.length; i++) {
-    // title
     const title = results[i].title
-    // descript
     const overview = results[i].overview
-    // image
     const imgSrc = results[i].poster_path
-    // div
+
+    // creating div and appending the above data
     const createDiv = document.createElement('div')
-    createDiv.id = 'container'
+    createDiv.id = 'movieContainer'
 
     createMovieData(title, overview, imgSrc, createDiv)
     wrapper.appendChild(createDiv)

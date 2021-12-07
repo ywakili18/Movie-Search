@@ -11,6 +11,10 @@ h1 {
   color: rgb(8, 213, 216);
   font-family: 'PT Sans Caption', sans-serif;
 }
+h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -23,8 +27,11 @@ a {
   color: rgb(55, 218, 142);
   font-weight: bold;
   text-decoration: underline;
+  transition: 0.25s;
 }
-
+a:hover {
+  color: rgb(199, 174, 233);
+}
 #searchButton {
   margin-left: 1em;
 }
@@ -99,6 +106,6 @@ form {
   text-align: start;
 }
 
-#container {
+#movieContainer {
   border: solid 1px black;
 }
