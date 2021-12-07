@@ -2,7 +2,7 @@
 
 ## Yousof Wakili
 
-#### [**GitHub**](https://github.com/ywakili18) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
+#### [**Live**](https://quikmoviesearch.surge.sh/) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
 
 Movie-Search is a front-end web application that utilizes HTML, CSS, and JavaScript. Bootstrap is used for small buttons and used a bootstrap library to create a dark mode theme.
 
