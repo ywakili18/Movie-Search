@@ -30,6 +30,7 @@ const movieResults = async (result) => {
     const resultsList = res.data.results
     createMovies(resultsList)
   } catch (err) {
+    alert('No movies returned 😔 try again')
     console.log('Error: msg of', err)
   }
 }
