@@ -7,6 +7,7 @@ body {
 body,
 #wrapper {
   background-color: #ffffff;
+  transition: 0.5s;
 }
 h1 {
   font-weight: bold;
@@ -59,18 +60,11 @@ form {
 }
 /* main wrapper containing each movie div */
 #wrapper {
-  transition: 1s;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2em;
   justify-content: space-evenly;
   column-gap: 2rem;
-}
-
-#wrapper h5 {
-  text-decoration: underline;
-  text-align: center;
-  margin-top: 1em;
 }
 
 @media only screen and (max-width: 900px) {
@@ -106,14 +100,13 @@ form {
   }
 }
 
+#movieContainer {
+  border: solid 1px black;
+}
 #descriptionContainer {
   margin-top: 1em;
   font-size: small;
   text-align: start;
-}
-
-#movieContainer {
-  border: solid 1px black;
 }
 /* dark mode svg hidden by default, linked to dark-mode.css */
 #darkModeContainer {

@@ -3,6 +3,7 @@ const DOMAIN = 'https://api.themoviedb.org/3'
 const IMAGE_BASE_PATH = 'https://image.tmdb.org/t/p/original'
 
 let searchInput = ''
+
 // selecting search bar
 const input = document.querySelector('#searchForm')
 const wrapper = document.querySelector('#wrapper')
@@ -13,7 +14,7 @@ input.addEventListener('submit', (e) => {
   searchInput = input.elements.query.value
 
   // passing in search query into movie results function
-  movieResults(searchInput)
+  searchResults(searchInput)
 
   // clearing search everytime new query is made
   if (wrapper.innerHTML != '') {
@@ -22,7 +23,7 @@ input.addEventListener('submit', (e) => {
 })
 
 // get req to api and log results
-const movieResults = async (result) => {
+const searchResults = async (result) => {
   try {
     const res = await axios.get(
       `${DOMAIN}/search/movie?query=${result}&api_key=${API_KEY}`
@@ -35,23 +36,25 @@ const movieResults = async (result) => {
 }
 
 // creating movies
-const createMovies = (results) => {
+const createMovies = (data) => {
   // checks if anything has return from search query
-  results.length < 1
+  data.length < 1
     ? alert('No movies returned 😔 try again')
     : console.log('error')
 
   // looping through the returned data and creating the content for page
-  for (let i = 0; i < results.length; i++) {
-    const title = results[i].title
-    const overview = results[i].overview
-    const imgSrc = results[i].poster_path
+  for (let i = 0; i < data.length; i++) {
+    const title = data[i].title
+    const overview = data[i].overview
+    const imgSrc = data[i].poster_path
 
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
 
     createMovieData(title, overview, imgSrc, createDiv)
+
+    // append to main wrapper
     wrapper.appendChild(createDiv)
   }
 }
@@ -75,6 +78,7 @@ const createOverview = (description, div) => {
   // Creating description div container
   const descriptionDiv = document.createElement('div')
   descriptionDiv.id = 'descriptionContainer'
+
   if (description === '') {
     const h5 = document.createElement('h5')
     const p = document.createElement('p')
