@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
 }
 body,
 #wrapper {
