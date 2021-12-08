@@ -6,6 +6,7 @@ let searchInput = ''
 
 // selecting search bar
 const input = document.querySelector('#searchForm')
+// main container for all movies
 const wrapper = document.querySelector('#wrapper')
 
 // Event Listener
@@ -42,22 +43,16 @@ const createMovies = (data) => {
 
   // looping through the returned data and creating the content for page
   for (let i = 0; i < data.length; i++) {
-    const title = data[i].title
-    const overview = data[i].overview
-    const imgSrc = data[i].poster_path
-    const date = data[i].release_date
-    const language = data[i].original_language
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
-
     const movieData = {
-      title: title,
-      overview: overview,
-      imgSrc: imgSrc,
+      title: data[i].title,
+      overview: data[i].overview,
+      imgSrc: data[i].poster_path,
       div: createDiv,
-      date: date,
-      language: language
+      date: data[i].release_date,
+      language: data[i].original_language
     }
     createMovieData(movieData)
 
@@ -82,7 +77,7 @@ const createTitle = (title, div) => {
 
 // Overview
 const createOverview = (description, date, lang, div) => {
-  // Creating description div container
+  // Creating description div container, will append to wrapper div
   const descriptionDiv = document.createElement('div')
   descriptionDiv.id = 'descriptionContainer'
 
