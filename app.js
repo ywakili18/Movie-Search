@@ -98,11 +98,8 @@ const createOverview = (description, date, lang, div) => {
     movieDescription.innerHTML = `${description}`
 
     const releaseDate = document.createElement('p')
-    const convertDate = new Date()
-    releaseDate.innerHTML = `Release date: ${convertDate.toLocaleDateString(
-      'en-US',
-      date
-    )}`
+    releaseDate.innerHTML = date
+
     const language = document.createElement('p')
     language.innerHTML = `Language: ${lang.toUpperCase()}`
 
