@@ -1,31 +1,53 @@
 ![Movie-Search](https://i.ibb.co/XxQMZBY/Screen-Shot-2021-12-06-at-10-16-11-PM.png)
 
-## Yousof Wakili
+# Quik Movie Search 🎥
 
-#### [**Live**](https://quikmoviesearch.surge.sh/) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
+## By. Yousof Wakili
 
-Movie-Search is a front-end web application that utilizes HTML, CSS, and JavaScript. Bootstrap is used for small buttons and used a bootstrap library to create a dark mode theme.
+## [**Live**](https://quikmoviesearch.surge.sh/) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
 
-## Movie-Search :
+---
 
-_*Search through the TMDB database to find your favorite movies and get information about it.*_
+## Description🗒
 
-## Technologies
+---
 
-![Technologies](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/153843217/original/4dd60989b231adcf1648273f970b8d3100e19264/create-a-website-using-html-css-javascript-and-bootstrap.png)
+#### Millions of movies, explore now using the TMDB database and retrieve information about your favorite cinema.
 
-# Getting started
+## Purpose of building this project 🤔
 
-#### `open index.html `
+---
+
+To build a movie app with Vanilla javascript using Asynchronous JavaScript (promises,async/await) and axios for API fetching.
+
+Quik Movie Search utilizes the TMDB API (https://developers.themoviedb.org/3/getting-started/introduction) to display content about each movie you search through. Error handling/rejection of each promise are handled through try/catch blocks and passing in the error if any errors occur with the API call. Axios library: for API calling.
+
+Bootstrap for small tasks such as creating a dark and regular mode, small font changes, and CSS for the rest of the transitions, responsiveness, font styling, etc.
+
+Quik Movie Search is deployed through surge for static sites and easy deployment.
+
+## Technologies 📟
+
+---
+
+- HTML
+- CSS
+- JavaScript
+- Axios library for API calls
+- Bootstrap for creating normal/dark mode, buttons
+
+  ![Technologies](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/153843217/original/4dd60989b231adcf1648273f970b8d3100e19264/create-a-website-using-html-css-javascript-and-bootstrap.png)
+
+---
+
+## Getting started
+
+#### `npm install - installing dependencies`
+
+#### `open index.html`
 
 - Quick note: dark-mode-switch.min.js and dark-mode.css is following @coliff dark-mode-switch repo here: https://github.com/coliff/dark-mode-switch to create the dark mode theme.
 
-# Screenshots
+## Screenshot
 
-### Dark Mode
-
-![Dark Mode](https://i.ibb.co/r7FgwY0/Screen-Shot-2021-12-06-at-10-25-30-PM.png)
-
-### Light Mode
-
-![Light Mode](https://i.ibb.co/Trbmvpv/Screen-Shot-2021-12-06-at-10-26-39-PM.png)
+![screenshot](https://i.ibb.co/tX85gZN/Screen-Shot-2021-12-10-at-1-48-47-AM.png)
