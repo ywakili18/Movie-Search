@@ -1,19 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Raleway&display=swap');
 body {
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   scroll-behavior: smooth;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  margin: auto;
+  background-color: rgb(128, 157, 128);
+  text-align: end;
+  border: 2px solid rgb(2, 2, 2);
+}
+main {
+  transition: 1s;
 }
 body,
 #wrapper {
-  background-color: #ffffff;
+  background-color: rgb(45, 68, 61);
+  color: rgb(255, 255, 255);
   transition: 0.5s;
 }
 h1 {
   font-weight: bold;
-  color: rgb(8, 213, 216);
-  font-family: 'PT Sans Caption', sans-serif;
 }
 h5 {
   font-weight: bold;
@@ -31,9 +47,8 @@ nav {
 
 a {
   margin-top: 1em;
-  font-size: 0.8em;
   margin-left: 2em;
-  color: rgb(55, 218, 142);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   text-decoration: underline;
   transition: 0.25s;
@@ -78,13 +93,18 @@ form {
     font-size: 1.5em;
     margin-top: 1em;
   }
+  footer {
+    font-size: small;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   #wrapper {
     grid-template-columns: none;
   }
+
   #searchInput {
+    padding: 0.25em;
     width: 20em;
     font-size: 1em;
     height: 2em;
@@ -102,7 +122,7 @@ form {
 }
 
 #movieContainer h5 {
-  text-decoration: underline;
+  font-size: x-large;
 }
 #descriptionContainer {
   margin-top: 1em;
