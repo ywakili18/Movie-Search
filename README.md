@@ -6,17 +6,13 @@
 
 ## [**Live**](https://quikmoviesearch.surge.sh/) **|** [**Say Hi to me on LinkedIn!**](https://www.linkedin.com/in/youseffect/) **|** [**Portfolio**](https://youseffect.com/)
 
----
-
 ## Description🗒
-
----
 
 #### Millions of movies, explore now using the TMDB database and retrieve information about your favorite cinema.
 
-## Purpose of building this project 🤔
-
 ---
+
+## Purpose of building this project 🤔
 
 To build a movie app with Vanilla javascript using Asynchronous JavaScript (promises,async/await) and axios for API fetching.
 Below is an example of said API call:
@@ -59,8 +55,6 @@ Quik Movie Search is deployed through surge for static sites and easy deployment
 
 ## Technologies 📟
 
----
-
 - HTML5
 - CSS3
 - JavaScript
@@ -68,8 +62,6 @@ Quik Movie Search is deployed through surge for static sites and easy deployment
 - Bootstrap for creating normal/dark mode, buttons
 
   ![Technologies](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/153843217/original/4dd60989b231adcf1648273f970b8d3100e19264/create-a-website-using-html-css-javascript-and-bootstrap.png)
-
----
 
 ## Getting started
 
