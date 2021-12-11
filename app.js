@@ -46,12 +46,13 @@ const createMovies = (data) => {
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
+    const newDate = formatDate(data[i].release_date)
     const movieData = {
       title: data[i].title,
       overview: data[i].overview,
       imgSrc: data[i].poster_path,
       div: createDiv,
-      date: data[i].release_date,
+      date: newDate,
       language: data[i].original_language
     }
     createMovieData(movieData)
@@ -123,4 +124,13 @@ const createImg = (img, div) => {
     image.src = `${IMAGE_BASE_PATH}/${img}`
     div.appendChild(image)
   }
+}
+// format the date using regex :)
+const formatDate = (input) => {
+  let date = input.match(/\d+/g),
+    year = date[0].substring(2), // get only two digits
+    month = date[1],
+    day = date[2]
+
+  return month + '/' + day + '/' + year
 }
