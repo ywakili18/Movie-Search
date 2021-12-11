@@ -19,6 +19,37 @@
 ---
 
 To build a movie app with Vanilla javascript using Asynchronous JavaScript (promises,async/await) and axios for API fetching.
+Below is an example of said API call:
+
+```
+// HTTP (GET) req to api and log results from TMDB API
+
+const searchResults = async (result) => {
+  try {
+    const res = await axios.get(
+      `${DOMAIN}/search/movie?query=${result}&api_key=${API_KEY}&`
+    )
+    const resultsList = res.data.results
+    createMovies(resultsList)
+  } catch (err) {
+    console.log('Error: msg of', err)
+  }
+}
+```
+
+Used Regex for date formatting, passing in the date below:
+
+```
+// format the date using regex :)
+const formatDate = (input) => {
+  let date = input.match(/\d+/g),
+    year = date[0].substring(2),
+    month = date[1],
+    day = date[2]
+
+  return month + '/' + day + '/' + year
+}
+```
 
 Quik Movie Search utilizes the TMDB API (https://developers.themoviedb.org/3/getting-started/introduction) to display content about each movie you search through. Error handling/rejection of each promise are handled through try/catch blocks and passing in the error if any errors occur with the API call. Axios library: for API calling.
 

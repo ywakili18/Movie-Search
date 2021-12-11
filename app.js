@@ -128,7 +128,7 @@ const createImg = (img, div) => {
 // format the date using regex :)
 const formatDate = (input) => {
   let date = input.match(/\d+/g),
-    year = date[0].substring(2), // get only two digits
+    year = date[0].substring(2),
     month = date[1],
     day = date[2]
 
