@@ -13,3 +13,6 @@
   background-color: #121212 !important;
   color: #eee;
 }
+[data-theme='dark'] footer {
+  background: rgb(59, 51, 60);
+}

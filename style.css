@@ -13,8 +13,9 @@ body {
   }
 }
 body,
-#wrapper {
-  background-color: rgb(45, 68, 61);
+#wrapper,
+footer {
+  background-color: rgb(173, 205, 201);
   color: rgb(255, 255, 255);
   transition: 0.5s;
   animation: fadeInAnimation ease 1s;
@@ -29,12 +30,12 @@ footer {
   bottom: 0;
   width: 100%;
   color: white;
-  text-align: center;
   padding: 0.5em;
   margin: auto;
   background-color: rgb(128, 157, 128);
-  text-align: end;
   border: 2px solid rgb(2, 2, 2);
+  border-radius: 5px;
+  text-align: left;
 }
 
 h1 {
@@ -51,13 +52,10 @@ nav {
 }
 #toggleDark {
   width: auto;
-  margin-top: 1em;
 }
 
 a {
-  margin-top: 1em;
-  margin-left: 2em;
-  color: rgb(0, 0, 0);
+  color: rgb(254, 251, 251);
   font-weight: bold;
   text-decoration: underline;
   transition: 0.25s;
@@ -67,6 +65,7 @@ a:hover {
 }
 #searchButton {
   margin-left: 1em;
+  height: 2.5em;
 }
 img {
   height: 200px;
@@ -78,11 +77,9 @@ form {
 #searchInput {
   width: 25em;
   font-size: 1em;
-  background-color: rgb(214, 249, 231);
+  background-color: rgb(234, 237, 245);
 }
-#searchForm {
-  margin-top: 1em;
-}
+
 /* main wrapper containing each movie div */
 #wrapper {
   display: grid;
@@ -92,6 +89,7 @@ form {
   column-gap: 2rem;
 }
 
+/* responsive */
 @media only screen and (max-width: 900px) {
   h1 {
     font-size: 2em;
@@ -100,33 +98,35 @@ form {
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 1.5em;
-    margin-top: 1em;
   }
   footer {
-    font-size: small;
+    font-size: x-small;
   }
 }
-
 @media only screen and (max-width: 600px) {
+  /* small breakpoint, makes column */
   #wrapper {
     grid-template-columns: none;
   }
-
+  #searchForm {
+    margin: auto;
+  }
   #searchInput {
     padding: 0.25em;
     width: 20em;
     font-size: 1em;
     height: 2em;
-    margin-top: 1em;
   }
   #searchButton {
-    padding: 0.25em;
-    width: 5em;
-    height: 2em;
-    margin-top: 1em;
+    font-size: 10px;
+    height: 2.5em;
+  }
+  footer a,
+  p {
+    font-size: 8px;
   }
   h1 {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 #movieContainer {
@@ -144,8 +144,8 @@ form {
 }
 
 /* dark mode svg hidden by default, linked to dark-mode.css */
-#darkModeContainer {
-  margin-top: 1.3em;
+nav {
+  margin-top: 1em;
 }
 #darkSvg {
   display: none;
