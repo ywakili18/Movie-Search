@@ -42,18 +42,18 @@ const createMovies = (data) => {
   data.length < 1 ? alert('No movies returned 😔 try again') : null
 
   // looping through the returned data and creating the content for page
-  for (let i = 0; i < data.length; i++) {
+  for (let val of data) {
     // creating div and appending the above data
     const createDiv = document.createElement('div')
     createDiv.id = 'movieContainer'
-    const newDate = formatDate(data[i].release_date)
+    const newDate = formatDate(val.release_date)
     const movieData = {
-      title: data[i].title,
-      overview: data[i].overview,
-      imgSrc: data[i].poster_path,
+      title: val.title,
+      overview: val.overview,
+      imgSrc: val.poster_path,
       div: createDiv,
       date: newDate,
-      language: data[i].original_language
+      language: val.original_language
     }
     createMovieData(movieData)
 
