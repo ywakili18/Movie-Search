@@ -61,8 +61,8 @@ Quik Movie Search is deployed through surge for static sites and easy deployment
 
 ---
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Axios library for API calls
 - Bootstrap for creating normal/dark mode, buttons
