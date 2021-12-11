@@ -4,8 +4,8 @@ const IMAGE_BASE_PATH = 'https://image.tmdb.org/t/p/original'
 
 let searchInput = ''
 
-// selecting search bar
 const input = document.querySelector('#searchForm')
+
 // main container for all movies
 const wrapper = document.querySelector('#wrapper')
 

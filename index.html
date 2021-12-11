@@ -64,28 +64,27 @@
     <!-- Movies displayed here -->
     <main>
       <div id="wrapper"></div>
+      <form id="searchForm">
+        <input
+          type="text"
+          placeholder="Enter movie here..."
+          name="query"
+          value=""
+          class="form-control"
+          id="searchInput"
+          required
+        />
+        <button class="btn btn-outline-warning sm:btn-sm" id="searchButton">
+          Search
+        </button>
+      </form>
       <footer>
         <div id="svgDig">
           <a href="https://github.com/ywakili18/Movie-Search" target="_blank">
             Check out the Github Repository here!
           </a>
-          <p>Project created by Yousof Wakili</p>
         </div>
-
-        <form id="searchForm">
-          <input
-            type="text"
-            placeholder="Enter movie here..."
-            name="query"
-            value=""
-            class="form-control"
-            id="searchInput"
-            required
-          />
-          <button class="btn btn-outline-warning sm:btn-sm" id="searchButton">
-            Search
-          </button>
-        </form>
+        <p>Project created by Yousof Wakili</p>
       </footer>
     </main>
     <script
